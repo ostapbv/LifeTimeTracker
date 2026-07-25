@@ -24,7 +24,7 @@ import kotlinx.coroutines.launch
         UsageAggregateEntity::class,
         NotificationStateEntity::class
     ],
-    version = 4,
+    version = 5,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
@@ -57,6 +57,15 @@ abstract class AppDatabase : RoomDatabase() {
     private class AppDatabaseCallback : RoomDatabase.Callback() {
         override fun onCreate(db: SupportSQLiteDatabase) {
             super.onCreate(db)
+            seedDatabase()
+        }
+
+        override fun onDestructiveMigration(db: SupportSQLiteDatabase) {
+            super.onDestructiveMigration(db)
+            seedDatabase()
+        }
+
+        private fun seedDatabase() {
             INSTANCE?.let { database ->
                 CoroutineScope(Dispatchers.IO).launch {
                     val dao = database.categoryDao()

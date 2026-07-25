@@ -142,7 +142,7 @@ fun AddActivityScreen(
 
             ExposedDropdownMenuBox(
                 expanded = expanded,
-                onExpandedChange = { expanded = it }
+                onExpandedChange = { expanded = !expanded }
             ) {
                 OutlinedTextField(
                     value = selectedCategory?.name ?: "Select Category",
@@ -151,7 +151,7 @@ fun AddActivityScreen(
                     label = { Text("Category") },
                     trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
                     colors = ExposedDropdownMenuDefaults.outlinedTextFieldColors(),
-                    modifier = Modifier.menuAnchor(type = ExposedDropdownMenuAnchorType.PrimaryNotEditable, enabled = true).fillMaxWidth()
+                    modifier = Modifier.menuAnchor().fillMaxWidth()
                 )
                 ExposedDropdownMenu(
                     expanded = expanded,
