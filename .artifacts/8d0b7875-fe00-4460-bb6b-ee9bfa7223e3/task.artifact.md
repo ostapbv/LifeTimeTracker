@@ -1,0 +1,4 @@
+- [ ] Update `.gitignore` to exclude personal IDE state files
+- [ ] Remove sensitive and unnecessary files from Git tracking
+- [ ] Commit and push the cleanup changes to GitHub
+- [ ] Verify that files are no longer tracked

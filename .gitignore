@@ -1,16 +1,30 @@
-*.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
+# Built artifacts
 /build
 /captures
 .externalNativeBuild
 .cxx
+.gradle
+.kotlin
+
+# Local configurations
 local.properties
 antigravity.md
+
+# IDE - IntelliJ / Android Studio
+*.iml
+.idea/workspace.xml
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+.idea/deploymentTargetSelector.xml
+.idea/markdown.xml
+.idea/.name
+.idea/shelf/
+
+# OS Specific
+.DS_Store
+
+# Log files
+*.log
